@@ -1,0 +1,246 @@
+.exporter-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 40px;
+  border-bottom: 3px solid #0066cc;
+  padding-bottom: 20px;
+}
+
+.app-header h1 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 2.5em;
+}
+
+.app-header p {
+  margin: 0;
+  color: #666;
+  font-size: 1.1em;
+}
+
+.success-message {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 2px solid #0066cc;
+  padding-bottom: 10px;
+}
+
+.section-desc {
+  color: #666;
+  margin: 10px 0;
+}
+
+.format-example {
+  background-color: #f0f0f0;
+  border-left: 4px solid #0066cc;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+
+.format-example code {
+  font-family: 'Courier New', Courier, monospace;
+  color: #333;
+  line-height: 1.6;
+}
+
+textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  resize: vertical;
+  transition: border-color 0.3s;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+}
+
+.preview {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.preview h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.message {
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 5px;
+  border-left: 4px solid #ddd;
+}
+
+.message-user {
+  background-color: #e3f2fd;
+  border-left-color: #0066cc;
+}
+
+.message-assistant {
+  background-color: #f5f5f5;
+  border-left-color: #666;
+}
+
+.message strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.message p {
+  margin: 0;
+  color: #555;
+  line-height: 1.5;
+}
+
+.more-messages {
+  color: #666;
+  font-style: italic;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+}
+
+.export-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 20px 0;
+  align-items: end;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.input-group input,
+.input-group select {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+}
+
+.btn-primary,
+.btn-export {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: #0066cc;
+  color: white;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #0052a3;
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4);
+}
+
+.btn-export {
+  background-color: #28a745;
+  color: white;
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.btn-export:hover:not(:disabled) {
+  background-color: #218838;
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .app-header h1 {
+    font-size: 1.8em;
+  }
+
+  .export-options {
+    grid-template-columns: 1fr;
+  }
+
+  .exporter-container {
+    padding: 15px;
+  }
+
+  .section {
+    padding: 15px;
+  }
+}
